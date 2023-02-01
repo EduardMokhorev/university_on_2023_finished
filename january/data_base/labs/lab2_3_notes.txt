@@ -1,0 +1,30 @@
+--9.	удалить все сведения о студентах, которые за текущий месяц не оплатили заданную образовательную услугу;
+
+
+WITH DebetorsInfo AS
+(
+	SELECT Students.id_student AS debetors
+	FROM Students INNER JOIN Payments  
+	ON Students.id_student = Payments.id_student
+	GROUP BY Students.id_student HAVING (MAX(Payments.date_pay) < '01.06.2023')
+)
+
+Delete 
+From Students
+WHERE id_student = DebetorsInfo.debetors
+
+	SELECT Students.id_student AS debetors
+	FROM Students INNER JOIN Payments  
+	ON Students.id_student = Payments.id_student
+	GROUP BY Students.id_student HAVING (MAX(Payments.date_pay) < '01.06.2023')
+
+
+
+
+
+
+DELETE FROM tabl2 WHERE EXISTS(SELECT 0 FROM tabl1 WHERE tabl1.cae=tabl2.code)
+
+DELETE tabl2 FROM tabl2,tabl1 WHERE tabl1.cae=tabl2.code
+
+DELETE FROM tabl2 USING tabl2,tabl1 WHERE tabl1.cae=tabl2.code
