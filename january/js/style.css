@@ -1,0 +1,56 @@
+﻿body {
+    background: black;
+    color: white;
+    font-family: Verdana;
+}
+#console {
+    overflow: auto;
+    border: 1px solid #000000;
+    margin: 20px 0 0 0px;
+    color: #ffffff;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    background: #000000;
+    height: 20px;
+    margin: 0 0 20px 0px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+button {
+    background: #e0e0e0;
+    border: 1px solid #949494;
+    width: 192px;
+    height: 30px;
+    padding-left: 10px;
+    color: #1c1c1c;
+}
+button:hover{
+    background: aqua;
+}
+input {
+    background: #e0e0e0;
+    border: 1px solid #949494;
+    width: 290px;height: 25px;
+    padding-left: 10px;
+    background: #282828;
+    color: #e0e0e0;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+.task-option:hover{
+    color: aqua;
+}
